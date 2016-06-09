@@ -1,8 +1,5 @@
 FROM perceptive/docker-php53
 
-RUN chmod u+x /usr/local/bin/apache2-foreground
-RUN chmod u+x /usr/local/bin/docker-php-ext-*
-
 RUN apt-get update && apt-get install -y freetds-dev locate
 
 RUN ln -s /usr/lib/x86_64-linux-gnu/libsybdb.so /usr/lib/libsybdb.so && ldconfig -v
